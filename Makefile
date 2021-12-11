@@ -1,23 +1,23 @@
-NAME 	:= libftprintf.a
+NAME 		:= libftprintf.a
 CC		:= clang
-CFLAGS	:= -Wall -Wextra -Werror -c
+CFLAGS		:= -Wall -Wextra -Werror -c
 RM		:= rm -f
 AR		:= ar rcs
 
 HEADERS_PATH 	:= -I ./include
-LIBFT			:= ./include/libft/libft.a
+LIBFT		:= ./include/libft/libft.a
 
 SRC_FILES = 	./src/ft_num_len.c \
-				./src/ft_print_char.c \
-				./src/ft_print_hexa.c \
-				./src/ft_print_integer.c \
-				./src/ft_print_p_symbol.c \
-				./src/ft_print_pointer.c \
-				./src/ft_print_string.c \
-				./src/ft_print_unsigned_int.c \
-				./src/ft_printf.c \
-				./src/ft_putnbr_hexa.c \
-				./src/ft_putnbr_unsigned.c
+		./src/ft_print_char.c \
+		./src/ft_print_hexa.c \
+		./src/ft_print_integer.c \
+		./src/ft_print_p_symbol.c \
+		./src/ft_print_pointer.c \
+		./src/ft_print_string.c \
+		./src/ft_print_unsigned_int.c \
+		./src/ft_printf.c \
+		./src/ft_putnbr_hexa.c \
+		./src/ft_putnbr_unsigned.c
 
 SRC_OBJ = ${SRC_FILES:%.c=%.o}
 
