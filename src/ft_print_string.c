@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:36:28 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/12 09:34:58 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/12 12:06:44 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_print_string(va_list args)
 	if (str == NULL)
 	{
 		ft_putstr_fd(NULL_MSG, STD_OUTPUT);
-		return (6);
+		return (ft_strlen(NULL_MSG));
 	}
 	while (str && *(str + i))
 	{

@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:15:19 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/12 02:00:37 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/12 12:13:17 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,13 @@
 # define X_UPPER_HEXA 'X'
 # define X_LOWER_HEXA 'x'
 # define C_CHARACTER 'c'
-# define NIL_MSG "(nil)"
-# define NULL_MSG "(null)"
 # define POINTER_HEAD "0x"
+# define NULL_MSG "(null)"
+# if __APPLE__
+#  define NIL_MSG "0x0"
+# else
+#  define NIL_MSG "(nil)"
+# endif
 
 int		ft_printf(const char *str, ...);
 int		ft_print_string(va_list args);

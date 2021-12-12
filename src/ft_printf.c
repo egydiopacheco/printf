@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 06:21:34 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/12 09:47:26 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/12 12:07:42 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_printf(const char *str, ...)
 			parse_flags(*(str + ++pos), args, &print_size);
 		else
 		{
-			write(1, &*(str + pos), STD_OUTPUT);
+			write(STD_OUTPUT, &*(str + pos), 1);
 			print_size++;
 		}
 		pos++;
