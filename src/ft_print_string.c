@@ -6,14 +6,18 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:36:28 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/10 19:09:42 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/12 09:34:58 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /*
- *
+ * Given a variadic list, print to the standard output the content of a string
+ * and return it's length
+ * Libft functions used:
+ *  - ft_strlen
+ *  - ft_putstr_fd
  */
 
 int	ft_print_string(va_list args)
@@ -25,15 +29,15 @@ int	ft_print_string(va_list args)
 	i = 0;
 	if (str == NULL)
 	{
-		ft_putstr_fd(NULL_MSG, 1);
+		ft_putstr_fd(NULL_MSG, STD_OUTPUT);
 		return (6);
 	}
-	while (str && str[i])
+	while (str && *(str + i))
 	{
-		write(1, &str[i], 1);
+		write(1, &*(str + i), STD_OUTPUT);
 		i++;
 	}
 	if (str)
-		return (ft_strlen(str));
+		return ((int)ft_strlen(str));
 	return (0);
 }

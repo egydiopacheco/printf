@@ -6,20 +6,19 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 06:21:34 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/10 19:10:27 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/12 09:47:26 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static inline void	parse_flags(char flag, va_list args, int *print_size);
 
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
-	int		pos;
 	int		print_size;
+	int		pos;
 
 	pos = 0;
 	print_size = 0;
@@ -30,7 +29,7 @@ int	ft_printf(const char *str, ...)
 			parse_flags(*(str + ++pos), args, &print_size);
 		else
 		{
-			write(1, &*(str + pos), 1);
+			write(1, &*(str + pos), STD_OUTPUT);
 			print_size++;
 		}
 		pos++;

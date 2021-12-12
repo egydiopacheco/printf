@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_num_len.c                                       :+:      :+:    :+:   */
+/*   ft_num_len_unsigned.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 20:58:37 by epacheco          #+#    #+#             */
-/*   Updated: 2021/12/12 09:17:37 by epacheco         ###   ########.fr       */
+/*   Created: 2021/12/12 01:37:17 by epacheco          #+#    #+#             */
+/*   Updated: 2021/12/12 09:16:52 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 /*
  * Receives a flag, if it is a pointer, return 1 as size.
  * If it is a regular, calculate the size of the number (nb)
- * Libft functions used : 
+ * Libft functions used :
  * - ft_strcmp;
  */
 
-int	ft_num_len(long long int nb, int base, char *flag)
+int	ft_num_len_unsigned(unsigned long long int nb, int base, char *flag)
 {
 	size_t	size;
 
@@ -33,8 +33,8 @@ int	ft_num_len(long long int nb, int base, char *flag)
 	}
 	while (nb)
 	{
-		nb = nb / base;
+		nb = nb / (unsigned int)base;
 		size++;
 	}
-	return ((int) size);
+	return ((int)size);
 }
