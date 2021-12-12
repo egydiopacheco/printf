@@ -17,7 +17,8 @@ SRC_FILES = 	./src/ft_num_len.c \
 		./src/ft_print_unsigned_int.c \
 		./src/ft_printf.c \
 		./src/ft_putnbr_hexa.c \
-		./src/ft_putnbr_unsigned.c
+		./src/ft_putnbr_unsigned.c \
+		./src/ft_num_len_unsigned.c
 
 SRC_OBJ = ${SRC_FILES:%.c=%.o}
 
