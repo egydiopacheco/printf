@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:35:28 by epacheco          #+#    #+#             */
-/*   Updated: 2021/09/15 21:01:29 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:39:11 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	**synthetize_array(char const *s, char c, char **arr)
 		if (*(s + start) != c)
 		{
 			end = get_upper_bound(s + start, c);
-			*(arr + k) = ft_substr(s, start, end);
+			*(arr + k) = ft_substr(s, (unsigned int)start, end);
 			start = (start + end - 1);
 			k++;
 		}

@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:34:12 by epacheco          #+#    #+#             */
-/*   Updated: 2021/09/15 01:11:07 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:16:30 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	digit_amount(long n)
 		n = n / 10;
 		size++;
 	}
-	return (size);
+	return ((int)size);
 }
 
 char	*ft_itoa(int n)

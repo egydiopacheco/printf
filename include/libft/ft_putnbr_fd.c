@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:35:18 by epacheco          #+#    #+#             */
-/*   Updated: 2021/09/11 13:35:20 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:28:35 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(digit, fd);
 	}
 	n = (n % 10) + correction;
-	c = n + '0';
+	c = (char)n + '0';
 	write(fd, &c, 1);
 }

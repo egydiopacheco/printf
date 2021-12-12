@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:36:04 by epacheco          #+#    #+#             */
-/*   Updated: 2021/09/13 14:19:16 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:35:49 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		size;
 
 	j = 0;
-	size = ft_strlen(s);
+	size = (int)ft_strlen(s);
 	if (!f || !s)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (size + 1));
+	str = (char *)malloc(sizeof(char) * ((unsigned int)size + 1));
 	if (!str)
 		return (NULL);
 	while (j < size)
 	{
-		*(str + j) = f(j, *(s + j));
+		*(str + j) = f((unsigned int)j, *(s + j));
 		j++;
 	}
 	*(str + j) = '\0';

@@ -6,7 +6,7 @@
 /*   By: epacheco <epacheco@student.42sp.org.       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:35:39 by epacheco          #+#    #+#             */
-/*   Updated: 2021/09/11 13:35:41 by epacheco         ###   ########.fr       */
+/*   Updated: 2021/12/11 18:37:55 by epacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strdup(const char *s)
 	int		j;
 	int		size;
 
-	size = ft_strlen(s) + 1;
+	size = (int)ft_strlen(s) + 1;
 	j = -1;
-	s_cpy = (char *)malloc(size * sizeof(char));
+	s_cpy = (char *)malloc((unsigned int)size * sizeof(char));
 	if (!s_cpy)
 		return (NULL);
 	while (*(s + ++j))
